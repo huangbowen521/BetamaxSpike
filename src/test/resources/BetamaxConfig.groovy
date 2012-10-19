@@ -3,7 +3,7 @@ betamax {
     proxyPort = 1337
     proxyTimeout = 30000
     defaultMode = TapeMode.READ_ONLY
-//    ignoreHosts = ['*.deeptraining.com']
+    ignoreHosts = []
     ignoreLocalhost = true
     sslSupport = true
 }

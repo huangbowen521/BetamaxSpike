@@ -1,25 +1,25 @@
 !tape
-name: my tape
+name: WeatherService
 interactions:
-- recorded: 2012-10-19T05:37:15.752Z
+- recorded: 2012-10-19T07:38:47.581Z
   request:
     method: POST
     uri: http://www.deeptraining.com/webservices/weather.asmx
     headers:
       Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-      Content-Length: '325'
+      Content-Length: '322'
       Content-Type: text/xml; charset=UTF-8
       Host: www.deeptraining.com
       Proxy-Connection: keep-alive
       SOAPAction: http://litwinconsulting.com/webservices/GetWeather
-      User-Agent: Java/1.6.0_35
+      User-Agent: Java/1.7.0_07
     body: |2-
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://litwinconsulting.com/webservices/">
          <soapenv:Header/>
          <soapenv:Body>
             <web:GetWeather>
                <!--Optional:-->
-               <web:City>Washington</web:City>
+               <web:City>Chicago</web:City>
             </web:GetWeather>
          </soapenv:Body>
         </soapenv:Envelope>
@@ -28,8 +28,8 @@ interactions:
     headers:
       Cache-Control: private, max-age=0
       Content-Type: text/xml; charset=utf-8
-      Date: Fri, 19 Oct 2012 05:37:14 GMT
+      Date: Fri, 19 Oct 2012 07:38:45 GMT
       Server: Microsoft-IIS/7.0
       X-AspNet-Version: 2.0.50727
       X-Powered-By: ASP.NET
-    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>Sunny</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
+    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>sdfksj</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
