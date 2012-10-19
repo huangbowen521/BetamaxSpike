@@ -24,11 +24,20 @@ import java.net.URLConnection;
  * Time: 1:49 PM
  * To change this template use File | Settings | File Templates.
  */
-public class WeatherService {
+public class WeatherService extends Service {
 
-    public String getWeather(String city) throws MalformedURLException,
+    @Override
+    String sendRequestImpl(String argument) {
+        try {
+            return getWeather(argument);
+        } catch (IOException e) {
+            //ignore
+        }
+        return null;
+    }
+
+    private String getWeather(String city) throws MalformedURLException,
             IOException {
-
         //Code to make a webservice HTTP request
         String responseString = "";
         String outputString = "";
@@ -90,7 +99,7 @@ public class WeatherService {
     }
 
     //format the XML in your String
-    public String formatXML(String unformattedXml) {
+    private String formatXML(String unformattedXml) {
         try {
             Document document = parseXmlFile(unformattedXml);
             OutputFormat format = new OutputFormat(document);
@@ -120,5 +129,4 @@ public class WeatherService {
             throw new RuntimeException(e);
         }
     }
-
 }
