@@ -1,7 +1,7 @@
 !tape
 name: my tape
 interactions:
-- recorded: 2012-10-18T06:14:28.787Z
+- recorded: 2012-10-19T03:06:59.654Z
   request:
     method: POST
     uri: http://www.deeptraining.com/webservices/weather.asmx
@@ -28,8 +28,8 @@ interactions:
     headers:
       Cache-Control: private, max-age=0
       Content-Type: text/xml; charset=utf-8
-      Date: Thu, 18 Oct 2012 06:14:26 GMT
+      Date: Fri, 19 Oct 2012 03:06:54 GMT
       Server: Microsoft-IIS/7.0
       X-AspNet-Version: 2.0.50727
       X-Powered-By: ASP.NET
-    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>Party Cloudy</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
+    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>Sunny</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>

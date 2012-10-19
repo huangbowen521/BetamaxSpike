@@ -16,7 +16,6 @@
 
   <dependencies>
       <dependency>
-          <scope>test</scope>
           <groupId>co.freeside</groupId>
           <artifactId>betamax</artifactId>
           <version>1.1.1</version>
@@ -25,7 +24,6 @@
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
           <version>4.10</version>
-          <scope>test</scope>
       </dependency>
       <dependency>
           <groupId>xerces</groupId>
