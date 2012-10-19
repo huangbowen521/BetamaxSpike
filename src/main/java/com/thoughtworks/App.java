@@ -22,14 +22,14 @@ public class App {
         final Weather weather = new Weather();
 
         Recorder recorder = new Recorder();
-        Map<Object,Object> map = new HashMap<Object, Object>();
-        map.put("mode",TapeMode.DEFAULT);
-        map.put("match", new MatchRule[]{MatchRule.method,MatchRule.uri});
+        Map<Object, Object> map = new HashMap<Object, Object>();
+        map.put("mode", TapeMode.DEFAULT);
+        map.put("match", new MatchRule[]{MatchRule.method, MatchRule.uri});
 
         recorder.withTape("my tape", map, new Closure(null) {
-           public void doCall() throws IOException {
-              weather.getWeather("Chicago");
-           }
+            public void doCall() throws IOException {
+                weather.getWeather("Chicago");
+            }
         });
     }
 

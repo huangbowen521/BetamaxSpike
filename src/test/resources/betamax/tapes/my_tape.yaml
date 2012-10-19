@@ -1,7 +1,7 @@
 !tape
 name: my tape
 interactions:
-- recorded: 2012-10-19T03:06:59.654Z
+- recorded: 2012-10-19T05:37:15.752Z
   request:
     method: POST
     uri: http://www.deeptraining.com/webservices/weather.asmx
@@ -28,7 +28,7 @@ interactions:
     headers:
       Cache-Control: private, max-age=0
       Content-Type: text/xml; charset=utf-8
-      Date: Fri, 19 Oct 2012 03:06:54 GMT
+      Date: Fri, 19 Oct 2012 05:37:14 GMT
       Server: Microsoft-IIS/7.0
       X-AspNet-Version: 2.0.50727
       X-Powered-By: ASP.NET

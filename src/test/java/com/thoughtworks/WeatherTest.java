@@ -15,14 +15,15 @@ import static org.junit.Assert.assertThat;
  */
 public class WeatherTest {
 
-    @Rule public Recorder recorder = new Recorder();
+    @Rule
+    public Recorder recorder = new Recorder();
 
-    @Betamax(tape="my tape", mode=TapeMode.WRITE_ONLY)
+    @Betamax(tape = "my tape", mode = TapeMode.WRITE_ONLY)
     @Test
     public void shouldGetWeatherviaWebService() throws Exception {
         Weather weather = new Weather();
         String result = weather.getWeather("Washington");
 
-        assertThat(result.isEmpty(),is(false));
+        assertThat(result.isEmpty(), is(false));
     }
 }
