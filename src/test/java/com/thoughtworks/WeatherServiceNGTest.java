@@ -2,9 +2,9 @@
 //
 //import co.freeside.betamax.Betamax;
 //import co.freeside.betamax.TapeMode;
-//import com.thoughtworks.extension.NGRecorder;
-//import com.thoughtworks.extension.NGRule;
-//import com.thoughtworks.extension.RulesListener;
+//import NGRecorder;
+//import NGRule;
+//import RulesListener;
 //import org.testng.annotations.Listeners;
 //import org.testng.annotations.Test;
 //
