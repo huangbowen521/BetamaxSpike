@@ -17,13 +17,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-/**
- * Created with IntelliJ IDEA.
- * User: twer
- * Date: 10/17/12
- * Time: 1:49 PM
- * To change this template use File | Settings | File Templates.
- */
 public class WeatherService extends Service {
 
     @Override
