@@ -3,7 +3,6 @@ package com.thoughtworks.extension;
 import co.freeside.betamax.Betamax;
 import co.freeside.betamax.Recorder;
 import groovy.lang.Closure;
-import org.codehaus.groovy.runtime.GeneratedClosure;
 import org.testng.IHookCallBack;
 import org.testng.IHookable;
 import org.testng.ITestResult;
