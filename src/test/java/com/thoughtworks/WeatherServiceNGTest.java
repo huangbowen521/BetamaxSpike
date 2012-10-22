@@ -16,8 +16,12 @@ public class WeatherServiceNGTest {
     @Betamax(tape = "WeatherService", mode = TapeMode.READ_WRITE)
     @Test
     public void shouldGetWeatherViaWebService2() throws Exception {
+
+        // when
         WeatherService weatherService = new WeatherService();
         String result = weatherService.sendRequest("Washington");
+
+        // then
         org.testng.Assert.assertEquals(result.isEmpty(), false);
     }
 }
