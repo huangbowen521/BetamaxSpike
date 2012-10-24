@@ -17,23 +17,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class WeatherService extends Service {
-
-    @Override
-    String sendRequestImpl(String argument) {
-        try {
-//            System.out.println("read line to stop it from running the rest of the code.");
-//            Scanner in = new Scanner(System.in);
-//            String s = in.next();
-
-            return getWeather(argument);
-        } catch (IOException e) {
-            //ignore
-        }
-        return null;
-    }
-
-    private String getWeather(String city) throws MalformedURLException,
+public class WeatherService {
+    public String getWeather(String city) throws MalformedURLException,
             IOException {
         //Code to make a webservice HTTP request
         String responseString = "";

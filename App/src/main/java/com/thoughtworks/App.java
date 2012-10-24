@@ -1,5 +1,7 @@
 package com.thoughtworks;
 
+import service.WeatherService;
+
 import java.io.IOException;
 
 public class App {
@@ -7,6 +9,6 @@ public class App {
     public static void main(String[] args) throws IOException {
         WeatherService weatherService = new WeatherService();
 
-        weatherService.sendRequest("Chicago");
+        weatherService.getWeather("Chicago");
     }
 }

@@ -1,2 +1,14 @@
 
 .DS_Store
+
+Service/Service.iml
+
+App/App.iml
+
+BetamaxSpike.iml
+
+BetamaxSpike.ipr
+
+BetamaxSpike.iws
+
+MockService/MockService.iml
