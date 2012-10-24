@@ -1,4 +1,4 @@
-package com.thoughtworks;
+package service;
 
 
 import org.apache.xml.serialize.OutputFormat;
@@ -16,7 +16,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Scanner;
 
 public class WeatherService extends Service {
 
