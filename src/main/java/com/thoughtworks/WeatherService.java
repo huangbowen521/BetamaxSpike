@@ -16,12 +16,17 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Scanner;
 
 public class WeatherService extends Service {
 
     @Override
     String sendRequestImpl(String argument) {
         try {
+//            System.out.println("read line to stop it from running the rest of the code.");
+//            Scanner in = new Scanner(System.in);
+//            String s = in.next();
+
             return getWeather(argument);
         } catch (IOException e) {
             //ignore
@@ -34,7 +39,7 @@ public class WeatherService extends Service {
         //Code to make a webservice HTTP request
         String responseString = "";
         String outputString = "";
-        String wsURL = "http://www.deeptraining.com/webservices/weather.asmx";
+        String wsURL = "http://localhost:8080/JettyProxySample/weather/webservices/weather.asmx";
         URL url = new URL(wsURL);
         URLConnection connection = url.openConnection();
         HttpURLConnection httpConn = (HttpURLConnection) connection;
