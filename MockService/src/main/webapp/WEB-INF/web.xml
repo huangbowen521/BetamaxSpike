@@ -1,0 +1,51 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_9"
+         version="2.4"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>google</servlet-name>
+        <servlet-class>com.woonoz.proxy.servlet.ProxyServlet</servlet-class>
+        <init-param>
+            <param-name>targetUrl</param-name>
+            <param-value>http://www.google.com.hk/</param-value>
+            <!--the following url work-->
+            <!--http://localhost:8080/JettyProxySample/google/search?q=hello-->
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>google</servlet-name>
+        <url-pattern>/google/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>weather</servlet-name>
+        <servlet-class>com.woonoz.proxy.servlet.ProxyServlet</servlet-class>
+        <init-param>
+            <param-name>targetUrl</param-name>
+            <param-value>http://www.deeptraining.com/</param-value>
+            <!--the following url work-->
+            <!--http://localhost:8080/JettyProxySample/google/search?q=hello-->
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>weather</servlet-name>
+        <url-pattern>/weather/*</url-pattern>
+    </servlet-mapping>
+    <!--<filter>-->
+    <!--<filter-name>continuationFilter</filter-name>-->
+    <!--<filter-class>org.eclipse.jetty.continuation.ContinuationFilter</filter-class>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+    <!--<filter-name>continuationFilter</filter-name>-->
+    <!--<servlet-name>proxyServlet</servlet-name>-->
+    <!--</filter-mapping>-->
+
+</web-app>
