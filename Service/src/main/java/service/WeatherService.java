@@ -1,6 +1,5 @@
 package service;
 
-
 import org.apache.xml.serialize.OutputFormat;
 import org.apache.xml.serialize.XMLSerializer;
 import org.w3c.dom.Document;
@@ -16,14 +15,16 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Properties;
 
 public class WeatherService {
+
     public String getWeather(String city) throws MalformedURLException,
             IOException {
         //Code to make a webservice HTTP request
         String responseString = "";
         String outputString = "";
-        String wsURL = "http://www.deeptraining.com/webservices/weather.asmx";
+        String wsURL = getBaseUrl() + "webservices/weather.asmx";
         URL url = new URL(wsURL);
         URLConnection connection = url.openConnection();
         HttpURLConnection httpConn = (HttpURLConnection) connection;
@@ -78,6 +79,13 @@ public class WeatherService {
         String formattedSOAPResponse = formatXML(outputString);
         System.out.println(formattedSOAPResponse);
         return weatherResult;
+    }
+
+    private String getBaseUrl() throws IOException {
+        URL propertiesUrl = getClass().getClassLoader().getResource("ServiceConfig.properties");
+        Properties properties = new Properties();
+        properties.load(propertiesUrl.openStream());
+        return properties.getProperty("weatherServiceBaseUrl");
     }
 
     //format the XML in your String
