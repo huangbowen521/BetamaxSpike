@@ -8,8 +8,8 @@
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>MockService</module>
         <module>Service</module>
         <module>App</module>
+        <module>MockService</module>
     </modules>
 </project>
