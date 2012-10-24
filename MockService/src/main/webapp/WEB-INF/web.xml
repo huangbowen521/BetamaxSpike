@@ -6,46 +6,22 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
-        <servlet-name>google</servlet-name>
-        <servlet-class>com.woonoz.proxy.servlet.ProxyServlet</servlet-class>
-        <init-param>
-            <param-name>targetUrl</param-name>
-            <param-value>http://www.google.com.hk/</param-value>
-            <!--the following url work-->
-            <!--http://localhost:8080/JettyProxySample/google/search?q=hello-->
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>google</servlet-name>
-        <url-pattern>/google/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>weather</servlet-name>
-        <servlet-class>com.woonoz.proxy.servlet.ProxyServlet</servlet-class>
+        <servlet-name>WeatherProxyServlet</servlet-name>
+        <servlet-class>betaMax.BetaMaxProxyServlet</servlet-class>
         <init-param>
             <param-name>targetUrl</param-name>
             <param-value>http://www.deeptraining.com/</param-value>
-            <!--the following url work-->
-            <!--http://localhost:8080/JettyProxySample/google/search?q=hello-->
+        </init-param>
+        <init-param>
+            <param-name>tapeName</param-name>
+            <param-value>weatherTape</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>weather</servlet-name>
+        <servlet-name>WeatherProxyServlet</servlet-name>
         <url-pattern>/weather/*</url-pattern>
     </servlet-mapping>
-    <!--<filter>-->
-    <!--<filter-name>continuationFilter</filter-name>-->
-    <!--<filter-class>org.eclipse.jetty.continuation.ContinuationFilter</filter-class>-->
-    <!--</filter>-->
-
-    <!--<filter-mapping>-->
-    <!--<filter-name>continuationFilter</filter-name>-->
-    <!--<servlet-name>proxyServlet</servlet-name>-->
-    <!--</filter-mapping>-->
 
 </web-app>

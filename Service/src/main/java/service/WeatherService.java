@@ -24,7 +24,7 @@ public class WeatherService {
         //Code to make a webservice HTTP request
         String responseString = "";
         String outputString = "";
-        String wsURL = getBaseUrl() + "/webservices/weather.asmx";
+        String wsURL = getBaseUrl() + "webservices/weather.asmx";
         URL url = new URL(wsURL);
         URLConnection connection = url.openConnection();
         HttpURLConnection httpConn = (HttpURLConnection) connection;
