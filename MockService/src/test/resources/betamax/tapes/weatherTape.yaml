@@ -1,0 +1,36 @@
+!tape
+name: weatherTape
+interactions:
+- recorded: 2012-10-24T09:47:54.443Z
+  request:
+    method: POST
+    uri: http://www.deeptraining.com//webservices/weather.asmx
+    headers:
+      Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+      Connection: keep-alive
+      Content-Length: '322'
+      Content-Type: text/xml; charset=UTF-8
+      Host: www.deeptraining.com
+      Proxy-Connection: Keep-Alive
+      SOAPAction: http://litwinconsulting.com/webservices/GetWeather
+      User-Agent: Java/1.7.0_07
+    body: |2-
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://litwinconsulting.com/webservices/">
+         <soapenv:Header/>
+         <soapenv:Body>
+            <web:GetWeather>
+               <!--Optional:-->
+               <web:City>Chicago</web:City>
+            </web:GetWeather>
+         </soapenv:Body>
+        </soapenv:Envelope>
+  response:
+    status: 200
+    headers:
+      Cache-Control: private, max-age=0
+      Content-Type: text/xml; charset=utf-8
+      Date: Wed, 24 Oct 2012 09:47:53 GMT
+      Server: Microsoft-IIS/7.0
+      X-AspNet-Version: 2.0.50727
+      X-Powered-By: ASP.NET
+    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>12345</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
