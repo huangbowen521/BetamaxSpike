@@ -7,7 +7,7 @@
     <groupId>App</groupId>
     <artifactId>App</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <parent>
         <artifactId>BetamaxSpike</artifactId>
         <groupId>BetamaxSpike</groupId>
@@ -19,5 +19,49 @@
             <artifactId>Service</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.1.1.RELEASE</version>
+        </dependency>
     </dependencies>
+    <build>
+        <plugins>
+        <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>maven-jetty-plugin</artifactId>
+            <version>6.1.10</version>
+            <configuration>
+                <scanIntervalSeconds>10</scanIntervalSeconds>
+                <stopKey>foo</stopKey>
+                <stopPort>9999</stopPort>
+                <connectors>
+                    <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                        <port>12352</port>
+                    </connector>
+                </connectors>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>start-jetty</id>
+                    <phase>pre-integration-test</phase>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                    <configuration>
+                        <scanIntervalSeconds>0</scanIntervalSeconds>
+                        <daemon>true</daemon>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>stop-jetty</id>
+                    <phase>post-integration-test</phase>
+                    <goals>
+                        <goal>stop</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+            </build>
 </project>

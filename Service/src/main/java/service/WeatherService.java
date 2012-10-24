@@ -23,7 +23,7 @@ public class WeatherService {
         //Code to make a webservice HTTP request
         String responseString = "";
         String outputString = "";
-        String wsURL = "http://localhost:8080/JettyProxySample/weather/webservices/weather.asmx";
+        String wsURL = "http://www.deeptraining.com/webservices/weather.asmx";
         URL url = new URL(wsURL);
         URLConnection connection = url.openConnection();
         HttpURLConnection httpConn = (HttpURLConnection) connection;
