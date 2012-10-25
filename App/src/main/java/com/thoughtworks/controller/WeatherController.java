@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import service.WeatherService;
@@ -24,10 +25,10 @@ import java.net.MalformedURLException;
 public class WeatherController {
 
     @RequestMapping(method= RequestMethod.POST)
-    public String processSubmit(Model model, RedirectAttributes redirectAttrs) throws IOException {
+    public String processSubmit(@RequestParam("city") String city, Model model, RedirectAttributes redirectAttrs) throws IOException {
 
 
-        WeatherInfo weatherInfo = new WeatherInfo("New York", "Sunny");
+        WeatherInfo weatherInfo = new WeatherInfo(city, "Sunny");
         weatherInfo.setWeather(new WeatherService().getWeather(weatherInfo.getCity()));
 
         redirectAttrs.addFlashAttribute("weatherInfo", weatherInfo);
@@ -40,7 +41,9 @@ public class WeatherController {
     }
 
     @ModelAttribute("weatherInfo")
-    public WeatherInfo createWeather() {
-        return new WeatherInfo("New York", "Sunny");
+    public WeatherInfo createWeather() throws IOException {
+        WeatherInfo weatherInfo = new WeatherInfo("New York", "Sunny");
+        weatherInfo.setWeather(new WeatherService().getWeather(weatherInfo.getCity()));
+        return weatherInfo;
     }
 }
