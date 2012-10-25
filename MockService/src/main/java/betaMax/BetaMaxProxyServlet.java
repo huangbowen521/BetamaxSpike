@@ -168,7 +168,7 @@ public class BetaMaxProxyServlet extends HttpServlet {
     private Map getArguments() {
         Hashtable<String, Object> arguments = new Hashtable<String, Object>();
         arguments.put("mode", TapeMode.READ_WRITE);
-        arguments.put("match", new MatchRule[]{MatchRule.uri, MatchRule.method});
+        arguments.put("match", new MatchRule[]{MatchRule.uri, MatchRule.method, MatchRule.body});
         return arguments;
     }
 }

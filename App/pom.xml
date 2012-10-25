@@ -37,7 +37,7 @@
                 <stopPort>9999</stopPort>
                 <connectors>
                     <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                        <port>12352</port>
+                        <port>54321</port>
                     </connector>
                 </connectors>
             </configuration>
