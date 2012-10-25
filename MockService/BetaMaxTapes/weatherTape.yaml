@@ -33,7 +33,7 @@ interactions:
       Server: Microsoft-IIS/7.0
       X-AspNet-Version: 2.0.50727
       X-Powered-By: ASP.NET
-    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>dddd</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
+    body: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetWeatherResponse xmlns="http://litwinconsulting.com/webservices/"><GetWeatherResult>DGDFH</GetWeatherResult></GetWeatherResponse></soap:Body></soap:Envelope>
 - recorded: 2012-10-25T03:25:59.768Z
   request:
     method: POST
