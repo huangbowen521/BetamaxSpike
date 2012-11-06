@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class WeatherServiceTest {
+public class WeatherServiceIntegrationTest {
     @Test
     public void shouldReturnANonEmptyResultWhenGettingWeather() throws Exception {
         WeatherService weatherService = new WeatherService();
