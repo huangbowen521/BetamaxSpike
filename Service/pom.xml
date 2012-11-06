@@ -176,11 +176,11 @@
                             <artifactId>cargo-maven2-plugin</artifactId>
                             <configuration>
                                 <container>
-                                    <containerId>jetty7x</containerId>
+                                    <containerId>jetty8x</containerId>
                                     <artifactInstaller>
                                         <groupId>org.eclipse.jetty</groupId>
                                         <artifactId>jetty-distribution</artifactId>
-                                        <version>7.6.7.v20120910</version>
+                                        <version>8.1.7.v20120910</version>
                                     </artifactInstaller>
                                 </container>
                             </configuration>
