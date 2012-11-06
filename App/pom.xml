@@ -29,38 +29,18 @@
         <plugins>
         <plugin>
             <groupId>org.mortbay.jetty</groupId>
-            <artifactId>maven-jetty-plugin</artifactId>
-            <version>6.1.10</version>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>7.6.7.v20120910</version>
             <configuration>
                 <scanIntervalSeconds>10</scanIntervalSeconds>
                 <stopKey>foo</stopKey>
                 <stopPort>9999</stopPort>
                 <connectors>
-                    <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                    <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                         <port>54321</port>
                     </connector>
                 </connectors>
             </configuration>
-            <executions>
-                <execution>
-                    <id>start-jetty</id>
-                    <phase>pre-integration-test</phase>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                    <configuration>
-                        <scanIntervalSeconds>0</scanIntervalSeconds>
-                        <daemon>true</daemon>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>stop-jetty</id>
-                    <phase>post-integration-test</phase>
-                    <goals>
-                        <goal>stop</goal>
-                    </goals>
-                </execution>
-            </executions>
         </plugin>
     </plugins>
             </build>
